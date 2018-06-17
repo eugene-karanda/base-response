@@ -1,4 +1,6 @@
-package org.overmind.restbaseresponse;
+package org.overmind.baseresponse.example.user.service;
+
+import org.overmind.baseresponse.example.user.model.User;
 
 import java.text.MessageFormat;
 import java.util.Collections;

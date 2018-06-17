@@ -1,4 +1,4 @@
-package org.overmind.restbaseresponse.response;
+package org.overmind.br.response;
 
 final class ResponseInfoUtil {
 
@@ -11,8 +11,5 @@ final class ResponseInfoUtil {
     public static ResponseInfo notFound(String what) {
         return ResponseInfo.of(404, "'" + what + "' not found");
     }
-
-    /// ....
-
 
 }

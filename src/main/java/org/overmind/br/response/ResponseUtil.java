@@ -1,4 +1,4 @@
-package org.overmind.restbaseresponse.response;
+package org.overmind.br.response;
 
 public final class ResponseUtil {
 

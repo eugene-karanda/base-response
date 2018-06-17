@@ -1,16 +1,21 @@
-package org.overmind.restbaseresponse;
+package org.overmind.baseresponse.example.user.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Objects;
 
-public class User {
+public final class User {
 
     private final String name;
 
     private final int age;
 
-    public static User of(String name, int age) {
+    @JsonCreator
+    public static User of(
+            @JsonProperty("name") String name,
+            @JsonProperty("age") int age
+    ) {
         return new User(name, age);
     }
 

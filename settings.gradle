@@ -1,1 +1,5 @@
-rootProject.name = 'rest-base-response'
+rootProject.name = "base-response"
+
+include "example:user:model"
+include "example:user:service"
+include "example:client"

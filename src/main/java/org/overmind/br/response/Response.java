@@ -1,17 +1,18 @@
-package org.overmind.restbaseresponse.response;
+package org.overmind.br.response;
 
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import java.util.Objects;
 
+@JsonDeserialize(using = ResponseDeserializer.class)
 public class Response<T> {
 
     private final ResponseInfo responseInfo;
 
     private final T payload;
 
-    //TODO json creator
-    static <T> Response<T> of(ResponseInfo responseInfo, T payload) {
+    public static <T> Response<T> of(ResponseInfo responseInfo, T payload) {
         return new Response<>(responseInfo, payload);
     }
 

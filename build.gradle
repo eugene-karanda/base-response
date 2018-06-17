@@ -1,34 +1,19 @@
-buildscript {
-    ext {
-        springBootVersion = '2.0.2.RELEASE'
-    }
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    }
-}
-
 apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
 
-group = 'org.overmind'
-version = '0.0.1-SNAPSHOT'
+group = 'org.overmind.base-response'
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
 
-
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-web')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile("com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.5")
+
+    testCompile("junit:junit:4.12")
+    testCompile("org.assertj:assertj-core:3.10.0")
 }
 
-task Wrapper(type: Wrapper) {
+task wrapper(type: Wrapper) {
     gradleVersion = "4.6"
 }

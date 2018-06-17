@@ -1,0 +1,14 @@
+group = 'org.overmind.base-response.example'
+
+subprojects {
+    apply plugin: "java"
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+
+        maven {
+            url 'https://repo.spring.io/libs-milestone'
+        }
+    }
+}

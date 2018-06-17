@@ -1,12 +1,12 @@
-package org.overmind.restbaseresponse;
+package org.overmind.baseresponse.example.user.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RestBaseResponseApplication {
+public class UserServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RestBaseResponseApplication.class, args);
+        SpringApplication.run(UserServiceApplication.class, args);
     }
 }

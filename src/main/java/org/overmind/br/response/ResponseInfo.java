@@ -1,4 +1,4 @@
-package org.overmind.restbaseresponse.response;
+package org.overmind.br.response;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
