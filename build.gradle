@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "org.overmind.base-response"
-version = "1.0.0.RC1"
+version = project.property("projectVersion")
 sourceCompatibility = 1.8
 
 repositories {
