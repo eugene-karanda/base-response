@@ -8,6 +8,8 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.TreeMap;
 
+import static org.overmind.baseresponse.example.user.service.ResponseInfoUtils.internal;
+
 public class UserRepository {
 
     private final Map<String, User> userMap;
@@ -18,6 +20,10 @@ public class UserRepository {
 
     public Optional<User> findOne(String name) {
         String key = name.toLowerCase();
+
+        if(key.equals("null")) {
+            throw new RepositoryException("some problems", internal());
+        }
 
         return Optional.ofNullable(
                 userMap.get(key)

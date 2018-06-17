@@ -12,6 +12,10 @@ public class Response<T> {
 
     private final T payload;
 
+    public static <T> Response<T> of(ResponseInfo responseInfo) {
+        return new Response<>(responseInfo, null);
+    }
+
     public static <T> Response<T> of(ResponseInfo responseInfo, T payload) {
         return new Response<>(responseInfo, payload);
     }
