@@ -14,7 +14,10 @@ repositories {
 
 dependencies {
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.5")
-    compile("org.springframework:spring-web:5.0.6.RELEASE")
+    compile("org.springframework:spring-web:5.0.6.RELEASE") {
+        exclude group: "org.springframework", module: "spring-beans"
+        exclude group: "org.springframework", module: "spring-core"
+    }
 
     testCompile("junit:junit:4.12")
     testCompile("org.assertj:assertj-core:3.10.0")
