@@ -1,4 +1,4 @@
-package org.overmind.br.response;
+package org.overmind.baseresponse;
 
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;

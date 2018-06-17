@@ -1,4 +1,4 @@
-package org.overmind.br.response;
+package org.overmind.baseresponse;
 
 final class ResponseInfoUtil {
 

@@ -1,7 +1,7 @@
 package org.overmind.br.client;
 
 import org.overmind.baseresponse.example.user.model.User;
-import org.overmind.br.response.Response;
+import org.overmind.baseresponse.Response;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -14,8 +14,8 @@ apply plugin: "org.springframework.boot"
 apply plugin: "io.spring.dependency-management"
 
 dependencies {
-    compile rootProject
     compile project(":example:user:model")
+    compile("org.overmind.base-response:base-response:1.0.0.RC1")
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }

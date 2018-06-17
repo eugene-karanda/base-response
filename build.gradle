@@ -1,6 +1,11 @@
-apply plugin: 'java'
+plugins {
+    id "java"
+    id "maven-publish"
+    id "com.jfrog.bintray" version "1.8.1"
+}
 
-group = 'org.overmind.base-response'
+group = "org.overmind.base-response"
+version = "1.0.0.RC1"
 sourceCompatibility = 1.8
 
 repositories {
@@ -13,6 +18,8 @@ dependencies {
     testCompile("junit:junit:4.12")
     testCompile("org.assertj:assertj-core:3.10.0")
 }
+
+apply from: rootProject.file("gradle/publish-bintray.gradle")
 
 task wrapper(type: Wrapper) {
     gradleVersion = "4.6"

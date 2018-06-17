@@ -10,5 +10,9 @@ subprojects {
         maven {
             url 'https://repo.spring.io/libs-milestone'
         }
+
+        maven {
+            url "https://dl.bintray.com/eugene-karanda/base-response"
+        }
     }
 }

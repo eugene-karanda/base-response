@@ -1,15 +1,15 @@
 package org.overmind.baseresponse.example.user.service;
 
 import org.overmind.baseresponse.example.user.model.User;
-import org.overmind.br.response.Response;
-import org.overmind.br.response.ResponseUtil;
+import org.overmind.baseresponse.Response;
+import org.overmind.baseresponse.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import static org.overmind.br.response.ResponseUtil.*;
+import static org.overmind.baseresponse.ResponseUtil.*;
 
 @RestController
 @RequestMapping("user")

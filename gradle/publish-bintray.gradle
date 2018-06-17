@@ -1,0 +1,38 @@
+if (project.hasProperty("bintray.user")) {
+
+    publishing {
+        publications {
+            mavenJava(MavenPublication) {
+                from components.java
+                pom.withXml {
+                    def root = asNode()
+                    root.appendNode("name", project.name)
+                    root.appendNode("url", "https://github.com/eugene-karanda/base-response")
+                }
+            }
+        }
+    }
+
+    bintray {
+        user = project.property("bintray.user")
+        key = project.property("bintray.key")
+        publications = ["mavenJava"]
+
+        pkg {
+            repo = "base-response"
+            name = "base-response"
+            userOrg = "eugene-karanda"
+            licenses = ["Apache-2.0"]
+            vcsUrl = "https://github.com/eugene-karanda/base-response.git"
+            version {
+                name = project.version
+                vcsTag = "v${project.version}"
+            }
+        }
+
+    }
+
+    bintrayUpload.doLast {
+        println("Uploaded $project.name version $project.version")
+    }
+}
